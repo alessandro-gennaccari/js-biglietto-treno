@@ -18,7 +18,7 @@ var discount = 0; // Dichiaro la variabile sconto, con valore di partenza 0;
 document.getElementById('km').innerHTML = 'La distanza che devi percorrere: ' + travelDistance + ' km';
 document.getElementById('age').innerHTML = 'L\'età del passeggero selezionata è: ' + passengerAge + ' anni';
 document.getElementById('price').innerHTML = 'Pagherai: ' + totalPrice.toFixed(2) + ' € ';
-document.getElementById('discount').innerHTML = 'Non hai diritto a sconti';
+document.getElementById('discount').innerHTML = 'Non hai diritto a sconti, non rientri in nessuna promozione attualmente attiva';
 
 if (passengerAge < 18) {
     discount = (totalPrice * 20 / 100); // Calcolo lo sconto per minorenni;
