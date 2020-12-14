@@ -17,15 +17,15 @@ var discount = 0; // Dichiaro la variabile sconto, con valore di partenza 0;
 
 document.getElementById('km').innerHTML = 'Devi percorrere:' + travelDistance + 'km ed ';
 document.getElementById('age').innerHTML = 'Hai ' + passengerAge + ' anni, quindi ';
-document.getElementById('price').innerHTML = 'Pagheresti: ' + totalPrice + ' € ';
+document.getElementById('price').innerHTML = 'Pagheresti: ' + totalPrice.toFixed(2) + ' € ';
 document.getElementById('discount').innerHTML = 'Non hai diritto a sconti';
 
 if (passengerAge < 18) {
     discount = (totalPrice * 20 / 100); // Calcolo lo sconto per minorenni;
     totalPrice -= discount;
-    document.getElementById('discount').innerHTML = 'Hai diritto ad uno sconto, quindi pagherai: ' + totalPrice + ' €';
+    document.getElementById('discount').innerHTML = 'Hai diritto ad uno sconto, quindi pagherai: ' + totalPrice.toFixed(2) + ' €';
 } else if (passengerAge >= 65) {
     discount = (totalPrice * 40 / 100); // Calcolo lo sconto per gli over65;
     totalPrice -= discount;
-    document.getElementById('discount').innerHTML = 'Hai diritto ad uno sconto, quindi pagherai: ' + totalPrice + ' €';
+    document.getElementById('discount').innerHTML = 'Hai diritto ad uno sconto, quindi pagherai: ' + totalPrice.toFixed(2) + ' €';
 }
